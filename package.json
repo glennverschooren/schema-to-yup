@@ -1,5 +1,5 @@
 {
-  "name": "schema-to-yup",
+  "name": "@redactie/schema-to-yup",
   "version": "1.10.0",
   "source": "src/index.js",
   "main": "dist/index.js",
@@ -33,6 +33,9 @@
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "publishConfig": {
+    "@redactie:registry": "https://nexusrepo.antwerpen.be/repository/npm-private"
   },
   "keywords": [
     "yup",

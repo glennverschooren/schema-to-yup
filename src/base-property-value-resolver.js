@@ -28,14 +28,15 @@ export class BasePropertyValueResolver extends Base {
   }
 
   get obj() {
-    const { schema, key, value, type, kind, config } = this;
+    const { schema, key, value, type, kind, config, name } = this;
     return {
       schema,
       key,
       value,
       type,
       kind,
-      config
+      config,
+      name
     };
   }
 }

@@ -15,7 +15,7 @@ import { ErrorMessageHandler } from "../../error-message-handler";
 class YupMixed extends Base {
   constructor(opts = {}) {
     super(opts.config);
-    let { schema, key, value, config } = opts;
+    let { schema, key, value, config, name } = opts;
     config = config || {};
     schema = schema || {};
     this.validateOnCreate(key, value, opts);
@@ -24,6 +24,7 @@ class YupMixed extends Base {
     this.schema = schema;
     this.properties = schema.properties || {};
     this.value = value;
+    this.name = name;
     this.constraints = this.getConstraints();
     this.format = value.format || this.constraints.format;
     this.config = config || {};
