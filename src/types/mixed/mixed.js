@@ -15,11 +15,12 @@ import { ErrorMessageHandler } from "../../error-message-handler";
 class YupMixed extends Base {
   constructor(opts = {}) {
     super(opts.config);
-    let { schema, key, value, config } = opts;
+    let { schema, key, value, config, name } = opts;
     config = config || {};
     schema = schema || {};
     this.validateOnCreate(key, value, opts);
     this.yup = yup;
+    this.name = name;
     this.key = key;
     this.schema = schema;
     this.properties = schema.properties || {};
